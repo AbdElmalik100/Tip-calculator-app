@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Fontawesome File -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- Main File -->
+    <link rel="stylesheet" href="CSS/master.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap">
+    <title>Challenge 5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.svg" alt="">
+        </div>
+        <div class="box">
+            <div class="left">
+                <div class="bill">
+                    <label for="">Bill</label>
+                    <div class="input-container">
+                        <img src="images/icon-dollar.svg" alt="">
+                        <input type="text" name="bill" placeholder="0" >
+                    </div>
+                </div>
+                <div class="select-tip">
+                    <label for="">Select Tip %</label>
+                    <div class="tip-grid">
+                        <div class="tip-1" data-tip="5">5%</div>
+                        <div class="tip-2" data-tip="10">10%</div>
+                        <div class="tip-3" data-tip="15">15%</div>
+                        <div class="tip-4" data-tip="25">25%</div>
+                        <div class="tip-5" data-tip="50">50%</div>
+                        <input type="text" placeholder="Custom">
+                    </div>
+                </div>
+                <div class="people-number">
+                    <label for="">Number Of People</label>
+                    <div class="input-container" data-wrong="Can't be zero">
+                        <img src="images/icon-person.svg" alt="">
+                        <input class="nums-of-people" type="text" name="number of people" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="calc">
+                    <div class="tip">
+                        <span>Tip Amount<br><span>/ Person</span></span>
+                        <h1>$0.00</h1>
+                    </div>
+                    <div class="total">
+                        <span>Total<br><span>/ Person</span></span>
+                        <h1>$0.00</h1>
+                    </div>
+                </div>
+                <span class="reset-btn">Reset</span>
+            </div>
+        </div>
+    </div>
+    <script src="JavaScript/master.js"></script>
+</body>
+</html>

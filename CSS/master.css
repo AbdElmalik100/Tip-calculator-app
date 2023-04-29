@@ -1,0 +1,270 @@
+/* Global Rules */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /* Neutral Colors */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+input {
+    Font-size: 24px;
+    text-align: right;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Grid System */
+@media (min-width: 576px) {
+
+    /* Small Devices => Landscape Phones */
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* Medium Devices => Tablets */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Desktops */
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* Large Screens */
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container .box {
+    display: flex;
+    padding: 30px;
+    background-color: var(--White);
+    border-radius: 10px;
+    width: 750px;
+    gap: 40px;
+}
+
+.container .box .left {
+    flex-basis: 50%;
+}
+
+.container .box .left label {
+    font-size: 13px;
+    color: var(--Dark-grayish-cyan);
+}
+
+.container .box .left .input-container {
+    position: relative;
+}
+
+.container .box .left .input-container img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.container .box .left .bill input,
+.container .box .left .people-number input {
+    padding: 10px;
+    outline: none;
+    border-color: transparent;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    color: var(--Very-dark-cyan);
+}
+
+.container .box .left .bill input:focus,
+.container .box .left .people-number input:focus {
+    border: 2px solid var(--Strong-cyan);
+}
+
+.container .box .left .bill input::placeholder,
+.container .box .left .people-number input::placeholder {
+    color: var(--Grayish-cyan);
+}
+
+.container .box .left .select-tip {
+    margin: 30px auto;
+}
+
+.container .box .left .select-tip .tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.container .box .left .select-tip .tip-grid div {
+    background-color: var(--Very-dark-cyan);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--White);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.container .box .left .select-tip .tip-grid div:hover {
+    background-color: hsl(172deg 85% 79%);
+    color: var(--Very-dark-cyan);
+}
+
+.container .box .left .select-tip .tip-grid input {
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 0 3px;
+    outline: none;
+    border-color: transparent;
+    color: var(--Very-dark-cyan);
+}
+
+.container .box .left .select-tip .tip-grid input:focus {
+    border: 2px solid var(--Strong-cyan);
+}
+
+.container .box .left .select-tip .tip-grid input::placeholder {
+    color: var(--Grayish-cyan);
+}
+
+.container .box .right {
+    padding: 35px 25px;
+    background-color: var(--Very-dark-cyan);
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    flex-basis: 50%;
+}
+
+.container .box .right .calc .tip,
+.container .box .right .calc .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.container .box .right .calc span {
+    font-size: 12px;
+    color: var(--Very-light-grayish-cyan);
+}
+
+.container .box .right .calc span>span {
+    font-size: 10px;
+    color: var(--Grayish-cyan);
+}
+
+.container .box .right .calc h1 {
+    color: var(--Strong-cyan);
+    margin: 0;
+}
+
+.container .box .right .reset-btn {
+    text-align: center;
+    width: 100%;
+    display: block;
+    background-color: hsl(172deg 42% 32%);
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Phone Size */
+@media (max-width: 575px) {
+    .container {
+        padding: 0;
+        justify-content: flex-end;
+    }
+
+    .container .box {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+/* Options */
+
+.container .box .left .people-number .nums-of-people.wrong {
+    border: 2px solid #f16f6f;
+}
+
+.container .box .left .people-number .input-container.wrong::before {
+    content: attr(data-wrong);
+    position: absolute;
+    font-size: 13px;
+    right: 0;
+    top: -25px;
+    color: #f16f6f;
+}
+
+.container .box .left .select-tip .tip-grid div.active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.container .box .right .reset-btn.reveal {
+    background-color: var(--Strong-cyan);
+    color: var(--White);
+    pointer-events: initial;
+}
+
+.container .box .right .reset-btn.reveal:hover {
+    background-color: hsl(172deg 85% 79%);
+    color: var(--Very-dark-cyan);
+}
